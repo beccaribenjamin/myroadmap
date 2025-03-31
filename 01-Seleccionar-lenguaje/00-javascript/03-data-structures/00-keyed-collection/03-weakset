@@ -1,0 +1,11 @@
+/*
+
+Los objetos WeakSet son colecciones de objetos. Un objeto en el WeakSet solo puede aparecer una vez. Es único en la colección WeakSet y los objetos no son enumerables.
+
+Las principales diferencias con el objeto Set son:
+
+A diferencia de los Sets, los WeakSets son colecciones únicamente de objetos y no de valores arbitrarios de cualquier tipo.
+El WeakSet es débil: Las referencias a los objetos de la colección se mantienen débiles. Si no hay otra referencia a un objeto almacenado en el WeakSet, pueden ser recolectados como basura. Eso también significa que no hay una lista de objetos actualmente almacenados en la colección. Los WeakSets no se pueden enumerar.
+Los casos de uso de los objetos WeakSet son limitados. No perderán memoria, por lo que puede ser seguro usar elementos DOM como clave y marcarlos con fines de seguimiento, por ejemplo.
+
+*/

@@ -1,32 +1,77 @@
-## Type Conversions
+# Tipos De Conversion
 
 
-Los operadores y las funciones convierten automáticamente los valores que se les dan al tipo correcto
-Por ejemplo:
-Alert convierte automáticamente cualquier valor en una cadena para mostrarlo. Las operaciones matemáticas convierten valores en números.
+Conversión de tipo (o encastre) significa transferencia de datos de un tipo de datos a otro. Conversión implícita ocurre cuando el compilador (para lenguajes compilados) o el tiempo de ejecución (para lenguajes de script como JavaScript) convierte automáticamente los tipos de datos. El código fuente también puede explícitamente requerir que tenga lugar una conversión.
 
-También hay casos en los que necesitamos convertir explícitamente un valor al tipo esperado.
+Por ejemplo, dada la expresión "foo" + 1, el Número 1 se convierte implícitamente en un Cuerda y la expresión regresa "foo1". Dada la instrucción Number("0x11"), la cuerda "0x11" se convierte explícitamente al número 17.
 
 
-# String Conversion
+## Pasar de String a Number
 
-Si queremos que un valor sea devuelto en string podemos hacer uso de String(valor)
+Para pasar un string a number, es decir una cadena de texto a un numero. Usamos 
 
 ```javascript
 
-let valor = true,
-let cadena = String(valor)
+let string = "125",
+let numero = Number(valor)
 
 ```
-# Number Conversion
+## De Number a String
 
-Ahora si queremos pasar de String a Number tenemos que usar Number(valor)
+Para pasar de Number a String, utilizo String()
 
 
 ```javascript
 
-let str = "55",
-let cadena = Number(str)
+let num = 789456123,
+let cadena = String(num)
 
 ```
 
+## De Dates(fechas) a Numbers
+
+El método Number() también lo podemos usar para convertir fechas
+
+```javascript
+
+let fecha = new Date()
+let numero = Number(fecha)
+
+```
+
+## De Dates(fechas) a String
+
+El método String() también lo podemos usar para convertir fechas
+
+```javascript
+
+let fecha  = new Date()
+let string = String(fecha)
+
+```
+
+
+## De Booleans a Numbers
+
+Al utilizar Number() con los datos booleanos obtenemos 1 o 0 dependiendo de si es verdadero o falso.
+
+```javascript
+
+let verdadero = true
+let valorV    = Number(verdadero)
+let falso     = false
+let valorF    = Number(falso)
+
+```
+## De Booleans a Strings
+
+Si utilizamos el método String() nos devuelve "true" o "false" dependiendo el caso
+
+```javascript
+
+let verdadero = true
+let strV      = String(verdadero)
+let falso     = false
+let strF      = String(falso)
+
+```
